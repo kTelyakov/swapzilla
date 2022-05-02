@@ -18,7 +18,10 @@ export default defineStore<Name, State, Getters, Actions>('ModalComposition', {
         name: 'Rebalance',
         label: 'Rebalance'
       }
-    ]
+    ],
+    depositModel: {},
+    withdrawModel: {},
+    rebalanceModel: {}
   }),
   getters: {
 

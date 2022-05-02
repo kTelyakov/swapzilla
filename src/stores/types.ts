@@ -13,6 +13,9 @@ export type State = {
   isOpened: boolean
   tabs: Tab[]
   tab: TabTypes
+  depositModel: Record<string, any>
+  withdrawModel: Record<string, any>
+  rebalanceModel: Record<string, any>
 };
 
 export type Getters = Record<any, any>;
