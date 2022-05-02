@@ -1,10 +1,12 @@
 <template>
-  <div class="">
+  <div class="q-mb-md">
     <q-select v-model="model1" :options="options" label="Choose exchange" />
     <q-select v-model="model2" :options="options" label="Choose currency" />
     <q-input v-model="model3" label="Withdraw amount">
       <template v-slot:append>
-        <div class="">max</div>
+        <q-badge color="blue-grey-3 q-pa-sm">
+          max
+        </q-badge>
       </template>
     </q-input>
   </div>
