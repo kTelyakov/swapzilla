@@ -1,20 +1,17 @@
 <template>
   <div>
-    isOpened : {{ isOpened }}
-    <q-btn @click="toggle">Открыть модалку</q-btn>
+    <q-btn @click="store.toggle">Открыть модалку</q-btn>
     <ModalComponent></ModalComponent>
   </div>
 </template>
 
 <script lang="ts">
 import {
-  defineComponent,
-  ref, toRefs
+  defineComponent
 } from 'vue'
 
-import { useModalWithTabsStore } from 'stores/example-store'
 import ModalComponent from 'components/ModalComponent.vue'
-import { useModalToggler } from 'src/composables/useModalToggler'
+import useModalComposition from "stores/modalComposition"
 
 export default defineComponent({
   name: 'ExampleComponent',
@@ -22,8 +19,9 @@ export default defineComponent({
     ModalComponent
   },
   setup () {
+    const store = useModalComposition()
     return {
-      ...useModalToggler()
+      store
     }
   }
 })
